@@ -45,6 +45,9 @@ body{
             color:#00ffcc ;
             cursor: pointer;
         }
+        .navi img{
+            width: 32px;
+        }
         h1{
             color: wheat;
         }
