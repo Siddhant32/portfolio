@@ -6,14 +6,20 @@
         padding: 0;
     }
 
-    body {
-        font-family: 'Inter', Arial, Helvetica, sans-serif;
-        background: linear-gradient(125deg, #000000, #212121);
+                body {
+        background-color: #111;
+        background-image: 
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E"), 
+            linear-gradient(125deg, #000000, #212121);
+        background-size: 40px 40px, cover;
+        background-repeat: repeat, no-repeat;
+        background-position: top left, center;
+        background-attachment: fixed;
         color: white;
+        font-family: 'Inter', sans-serif;
+        margin: 0;
         height: 100vh;
-        overflow: hidden;
         }
-
         .landing {
         display: flex;
         flex-direction: column;
@@ -139,10 +145,10 @@
 
     .sections.show {
         display: flex;
-        z-index: 10;
     }
 
     .menu-toggle {
         display: block;
+        z-index: 10;
     }
     }
