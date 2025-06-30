@@ -5,8 +5,10 @@
         margin: 0;
         padding: 0;
     }
-
-                body {
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
         background-color: #111;
         background-image: 
             url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E"), 
@@ -19,6 +21,16 @@
         font-family: 'Inter', sans-serif;
         margin: 0;
         height: 100vh;
+        }
+        
+        body::after{
+            content: '';;
+            display: block;
+            height: 120px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
         }
         .landing {
         display: flex;
@@ -65,8 +77,8 @@
         }
 
         .middle {
-        position: absolute;
-        top: 55%;
+        position: relative;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
@@ -151,4 +163,58 @@
         display: block;
         z-index: 10;
     }
+    }
+    .about{
+        text-align: center;
+        margin: 80px auto;
+        max-width: 900px;
+        margin-bottom: 50px;
+        padding: 40px;
+        background-color:rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 100px;
+    }
+    .about:hover{
+        transform: scale(1.02);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+    .about h1{
+        font-size: clamp(24px, 5vw, 40px);
+        color: #00ffcc;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 800;
+    }
+    .about p{
+        font-size: clamp(12px, 2.5vw, 20px);
+        font-weight: 300;
+        line-height: 1.7;
+        letter-spacing: 0.3px;
+    }
+    @media (max-width:768px){
+        .about{
+            padding: 30px 20px;
+            margin: 60px 20px;
+        }
+        .about h1{
+            font-size: 28px;
+        }
+        .about p{
+            font-size: 14px;
+        }
+    }
+    @media (max-width:480px){
+        .about{
+            padding: 25px 15px;
+        }
+        .about h1{
+            font-size: 24px;
+        }
+        .about p{
+            font-size: 10px;
+        }
     }
