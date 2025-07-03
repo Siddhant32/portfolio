@@ -112,7 +112,14 @@
         </li>
     </ul>
     </div>
+<script>
+    const toggle = document.querySelector('.menu-toggle');
+    const sections = document.querySelector('.sections');
 
+    toggle.addEventListener('click', () => {
+        sections.classList.toggle('show');
+    });
+</script>
 
     </body>
     </html>
